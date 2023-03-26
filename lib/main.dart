@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:praktikum_mobile/login_page.dart';
-import 'package:praktikum_mobile/login_pagee.dart';
-import 'package:praktikum_mobile/quiz%20teori/container_page.dart';
-import 'package:praktikum_mobile/quiz%20teori/segitasiku_page.dart';
+import 'package:praktikum_mobile/container_page.dart';
+import 'package:praktikum_mobile/segitasiku_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
 
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const LoginPage(),
     );
   }
 }
