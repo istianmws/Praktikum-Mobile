@@ -16,8 +16,8 @@ class LoginPageGroceryApp extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Icon(Icons.storefront_outlined, color: Colors.teal,),
-              const SizedBox(height: 150),
+              Icon(Icons.storefront_outlined, color: Colors.teal,size: 200,),
+              const SizedBox(height: 100),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: TextFormField(
