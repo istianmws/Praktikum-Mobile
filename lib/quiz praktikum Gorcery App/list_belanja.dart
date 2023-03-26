@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 
 import 'detail_belanja.dart';
-import 'groceries.dart';class ListPage extends StatefulWidget {
+import 'groceries.dart';
+class ListPage extends StatefulWidget {
   const ListPage({Key? key}) : super(key: key);
 
 
