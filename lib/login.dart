@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'list_belanja.dart';
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginPageGroceryApp extends StatelessWidget {
+  const LoginPageGroceryApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               Icon(Icons.storefront_outlined, color: Colors.teal,),
-              const SizedBox(height: 50),
+              const SizedBox(height: 150),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: TextFormField(
@@ -75,20 +75,18 @@ class LoginPage extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: ElevatedButton(
-                  onPressed: (){},
-                  // decoration: BoxDecoration(
-                  //   color: Colors.black,
-                  //   borderRadius: BorderRadius.circular(8),
-                  // ),
+                  onPressed: (){
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                      return ListPage();
+                    }));
+                  },
                   child: Text('Login'),
                 ),
               ),
               const SizedBox(height: 15),
               TextButton(
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return ListPage();
-                    }));
+
                   },
                   child: Text('Lupa Password?'))
             ],

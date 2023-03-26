@@ -20,6 +20,13 @@ class _ListPageState extends State<ListPage> {
           title: Center(
             child: Text("Grocery App"),
           ),
+          actions: [
+            IconButton(
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.exit_to_app_rounded)),
+          ],
         ),
         body: ListView.builder(itemBuilder: (context , index){
             final Groceries produk = groceryList[index];
@@ -45,7 +52,7 @@ class _ListPageState extends State<ListPage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.horizontal(left: Radius.circular(10)),
                         image: DecorationImage(
-                          image: NetworkImage(produk.productImageUrls[1]),
+                          image: NetworkImage(produk.productImageUrls[0]),
                           fit: BoxFit.cover
                         )
                       ),
