@@ -3,8 +3,8 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 
 
-import 'package:praktikum_mobile/quiz%20teori/biodata_page.dart';
-import 'package:praktikum_mobile/quiz%20teori/segitasiku_page.dart';
+import 'package:praktikum_mobile/biodata_page.dart';
+import 'package:praktikum_mobile/segitasiku_page.dart';
 import 'layanglayang_page.dart';
 
 
