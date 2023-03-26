@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:praktikum_mobile/login.dart';
-
-import 'list_belanja.dart';
+import 'package:praktikum_mobile/quiz%20teori/container_page.dart';
+import 'package:praktikum_mobile/quiz%20teori/segitasiku_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Grocery App',
+      title: 'Flutter Login',
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
 
       debugShowCheckedModeBanner: false,
-      home: LoginPageGroceryApp(),
+      home: HomePage(),
     );
   }
 }
