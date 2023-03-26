@@ -31,7 +31,7 @@ class _ListPageState extends State<ListPage> {
         body: ListView.builder(itemBuilder: (context , index){
             final Groceries produk = groceryList[index];
             return Card(
-                color: Colors.teal[100],
+              color: Colors.teal[100],
               child: InkWell(
                 onTap: (){
                   Navigator.push(
@@ -42,42 +42,69 @@ class _ListPageState extends State<ListPage> {
                   );
                 },
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Container(
-
                       padding: EdgeInsets.all(8),
                       height: 200,
                       width: 200,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.horizontal(left: Radius.circular(10)),
-                        image: DecorationImage(
-                          image: NetworkImage(produk.productImageUrls[0]),
-                          fit: BoxFit.cover
-                        )
+                        borderRadius: BorderRadius.circular(10),
+                        //image: DecorationImage(
+                          //image: NetworkImage(produk.productImageUrls[0]),
+                          //fit: BoxFit.cover
+                        //
+                      ),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: <Widget>[
+                          for (var i = 0; i < produk.productImageUrls.length ; i++)
+                            Container(
+                              padding: const EdgeInsets.only(left: 10, right: 5),
+                              width: 200,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
+                              child: Image.network(
+                                produk.productImageUrls[i],
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                        ],
                       ),
                     ),
                     SizedBox(width: 15),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          produk.name,
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Text(
+                              'By ${produk.storeName}',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 15),
-                        Text(
-                          'by :' + produk.storeName,
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 25,
-
+                          SizedBox(height: 15),
+                          FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Text(
+                              produk.name,
+                              maxLines: 3,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                color: Colors.teal[200],
+                              ),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
                     )
                   ],
                 ),
