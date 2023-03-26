@@ -2,9 +2,15 @@
 
 Tugas-tugas, Kuis, dan Responsi Praktikum Mobile 2023
 
-```Tugas Pertemuan 2 - FLutter Layout Login```
+```Quiz Praktikum Mobile```
+###### Login Page
+![image](https://user-images.githubusercontent.com/80052655/227764949-57b4e45d-3223-495a-8496-e4bd252aafc8.png)
 
-![image](https://user-images.githubusercontent.com/80052655/224126379-9ee8e262-c1d4-4721-85b8-fba8697bf12a.png)
+###### List Page
+![image](https://user-images.githubusercontent.com/80052655/227764967-00b7ecbc-4d13-4f35-9eea-de371e0da46b.png)
+
+###### Detail Page
+![image](https://user-images.githubusercontent.com/80052655/227764982-43b2993b-e9ac-4aa5-8217-12d446952a87.png)
 
 ## Getting Started
 
