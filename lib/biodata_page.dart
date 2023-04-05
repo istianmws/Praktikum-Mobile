@@ -22,7 +22,7 @@ class BiodataPage extends StatelessWidget {
                         Text(
                           'Halo, Selamat Datang!',
                           style: TextStyle(
-                            color: Colors.black45,
+                              color: Colors.black45,
                               fontWeight: FontWeight.bold
                           ),
                         ),
@@ -30,9 +30,9 @@ class BiodataPage extends StatelessWidget {
                         Text(
                           'Istian Muhammad',
                           style: TextStyle(
-                            color: Colors.black54,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold
+                              color: Colors.black54,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold
                           ),
                         )
                       ],
@@ -41,15 +41,15 @@ class BiodataPage extends StatelessWidget {
                       width: 70,
                       height: 70,
                       decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('ava.png'),
-                          fit: BoxFit.contain
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 2,
-                        )
+                          image: DecorationImage(
+                              image: AssetImage('ava.png'),
+                              fit: BoxFit.contain
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 2,
+                          )
                       ),
                     ),
                   ],
@@ -92,7 +92,7 @@ class BiodataPage extends StatelessWidget {
                         children: [
                           Text(
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.bold,
                             ) ,
                             'Istian Muhammad WS',
                           ),
@@ -135,9 +135,9 @@ class BiodataPage extends StatelessWidget {
                   ),
                   child: TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search_rounded),
-                      border: InputBorder.none,
-                      hintText: 'Cari Hoby mwehehe'
+                        prefixIcon: Icon(Icons.search_rounded),
+                        border: InputBorder.none,
+                        hintText: 'Cari Hoby mwehehe'
                     ),
                     onChanged: (value) {
                       // Menerapkan kata kunci pencarian ke fungsi filterItems
@@ -247,7 +247,7 @@ class BiodataPage extends StatelessWidget {
             ],
           ),
         ) ,
-        
+
       ),
     );
   }
