@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'dummy.dart';
-import 'list_page.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -20,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Center(
-            child: Text("Tourism Destination")
+            child: Text("Aplikasi Mobile UTS")
         ),
         actions: [
           IconButton(
@@ -36,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             key: _formKey,
             child: Column(
               children: [
-                Icon(Icons.beach_access_rounded, color: Colors.teal,size: 200,),
+                Icon(Icons.adb_rounded, color: Colors.teal[500],size: 200,),
                 const SizedBox(height: 100),
                 //username
                 username(),
@@ -97,37 +95,37 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget password() {
     return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: TextFormField(
-          obscureText: true,
-          decoration: InputDecoration(
-              icon: Icon(Icons.lock),
-              enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
-                  borderRadius: BorderRadius.circular(20)
-              ),
-              focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey.shade400),
-                  borderRadius: BorderRadius.circular(15)
-              ),
-              fillColor: Colors.grey.shade200,
-              filled: true,
-              labelText: 'Password',
-              labelStyle: TextStyle(color: Colors.grey[700]),
-              hintText: "Masukkan Password",
-              hintStyle: TextStyle(color: Colors.grey[500])
-          ),
-          validator: (value) {
-            if (value!.isEmpty) {
-              return 'Please enter your password';
-            }
-            return null;
-          },
-          onSaved: (value) {
-            _password = value!;
-          },
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      child: TextFormField(
+        obscureText: true,
+        decoration: InputDecoration(
+            icon: Icon(Icons.lock),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.white),
+                borderRadius: BorderRadius.circular(20)
+            ),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey.shade400),
+                borderRadius: BorderRadius.circular(15)
+            ),
+            fillColor: Colors.grey.shade200,
+            filled: true,
+            labelText: 'Password',
+            labelStyle: TextStyle(color: Colors.grey[700]),
+            hintText: "Masukkan Password",
+            hintStyle: TextStyle(color: Colors.grey[500])
         ),
-      );
+        validator: (value) {
+          if (value!.isEmpty) {
+            return 'Please enter your password';
+          }
+          return null;
+        },
+        onSaved: (value) {
+          _password = value!;
+        },
+      ),
+    );
   }
 
   Widget login() {
@@ -145,12 +143,12 @@ class _LoginPageState extends State<LoginPage> {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
       // Check if the username and password are correct
-      if (_username == 'admin' && _password == 'password') {
+      if (_username == '123190107' && _password == 'istianmws') {
         // Navigate to the home page
         Navigator.pushReplacementNamed(
-          context,
-          '/list',
-          arguments: {'username': _username}
+            context,
+            '/home',
+            arguments: {'username': _username}
         );
       } else {
         // Show an error message

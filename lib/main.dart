@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:praktikum_mobile/list_page.dart';
-import 'package:praktikum_mobile/login_page.dart';
+
+import 'login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,18 +14,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Login',
+      title: 'Uts Mobile',
       initialRoute: '/',
       routes: {
-        '/list': (context) => ListPage(),
+        '/home': (context) => const ListPage(),
+        '/logout': (context) => const LoginPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
 
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }
-
