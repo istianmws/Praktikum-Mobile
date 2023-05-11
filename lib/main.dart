@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:praktikum_mobile/list_page.dart';
+import 'package:praktikum_mobile/listproduct.dart';
 
 import 'login_page.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Uts Mobile',
       initialRoute: '/',
       routes: {
-        '/home': (context) => const ListPage(),
+        '/home': (context) => ListProduct(),
         '/logout': (context) => const LoginPage(),
       },
       theme: ThemeData(
